@@ -62,25 +62,25 @@ addEventListener('load', function OnWindowLoade() {
             }
             
         } else if(textArea.innerHTML === 'ERROR') {
-            if(e.target.innerHTML !== '+' && e.target.innerHTML !== '-' && e.target.innerHTML !== '/' && e.target.innerHTML !== '.' && e.target.innerHTML !== '=' && e.target.innerHTML !== '*') {
+            if(e.target.innerHTML !== '+'  && e.target.innerHTML !== '/' && e.target.innerHTML !== '.' && e.target.innerHTML !== '=' && e.target.innerHTML !== '*') {
             textArea.innerHTML = e.target.innerHTML
 
             }
 
         }else if(textArea.innerHTML === 'Infinity') {
-            if(e.target.innerHTML !== '+' && e.target.innerHTML !== '-' && e.target.innerHTML !== '/' && e.target.innerHTML !== '.' && e.target.innerHTML !== '=' && e.target.innerHTML !== '*') {
+            if(e.target.innerHTML !== '+'  && e.target.innerHTML !== '/' && e.target.innerHTML !== '.' && e.target.innerHTML !== '=' && e.target.innerHTML !== '*') {
             textArea.innerHTML = e.target.innerHTML
 
             }
 
         }else if(textArea.innerHTML === '-Infinity') {
-            if(e.target.innerHTML !== '+' && e.target.innerHTML !== '-' && e.target.innerHTML !== '/' && e.target.innerHTML !== '.' && e.target.innerHTML !== '=' && e.target.innerHTML !== '*') {
+            if(e.target.innerHTML !== '+'  && e.target.innerHTML !== '/' && e.target.innerHTML !== '.' && e.target.innerHTML !== '=' && e.target.innerHTML !== '*') {
             textArea.innerHTML = e.target.innerHTML
 
             }
 
         }else if(textArea.innerHTML === '0') {
-            if(e.target.innerHTML !== '+' && e.target.innerHTML !== '-' && e.target.innerHTML !== '/' && e.target.innerHTML !== '*'){
+            if(e.target.innerHTML !== '+' && e.target.innerHTML !== '/' && e.target.innerHTML !== '*'){
                 if(e.target.innerHTML === '.'){
                     textArea.innerHTML += e.target.innerHTML
                 } else {
