@@ -7,6 +7,7 @@ addEventListener('load', function OnWindowLoade() {
         '=',
     ];
 
+
     function log(arg){
         console.log(arg)
     }
@@ -17,6 +18,9 @@ addEventListener('load', function OnWindowLoade() {
     const calc = document.getElementById('calc');
 
     const textArea = document.getElementById('inputVal');
+
+
+
 
 
     signs.forEach((sign) => {
@@ -40,6 +44,8 @@ addEventListener('load', function OnWindowLoade() {
     })
 
 
+
+
     function onButtonClick(e) {
 
         if(e.target.innerHTML === 'c') {
@@ -47,7 +53,8 @@ addEventListener('load', function OnWindowLoade() {
 
         } else if(e.target.innerHTML === '=') {
             if(textArea.value.slice(-1) !== '+' && textArea.value.slice(-1) !== '-' && textArea.value.slice(-1) !== '/' && textArea.value.slice(-1) !== '.' && textArea.value.slice(-1) !== '*') {
-                            textArea.innerHTML = eval(textArea.innerHTML)
+                textArea.innerHTML = eval(textArea.innerHTML)
+                            
             } else {
                 alert('Математический оператор находиться без второго аргумента')
                 textArea.innerHTML = 'ERROR'
@@ -113,19 +120,43 @@ addEventListener('load', function OnWindowLoade() {
         }
     }
 
-
-
 })
 
 
 
+function chachStyle(){
+    const textArea = document.querySelector('#inputVal')
+    const body = document.body
+    const intStyle = document.getElementById('int-style')
+    const btn = document.querySelectorAll('.btn')
+    const btnResult = document.querySelector('.btnResult')
 
 
+    if(intStyle.checked){
+        console.log('Night theme included')
+        textArea.style.backgroundColor = ' rgb(224, 221, 195)'
+        textArea.style.color = 'black'
+        textArea.style.transition='1s'
+        body.style.transition='1s'
+        body.style.backgroundColor='white'
+        btnResult.classList.remove('nightStyle')
 
+        for(let i=0; i < btn.length; i++){
+            btn[i].classList.remove('nightStyle')
+        }
 
+    } else {
+        console.log('Day theme included')
+        textArea.style.backgroundColor = 'rgb(66, 63, 41)'
+        textArea.style.color = 'white'
+        textArea.style.transition='1s'
+        body.style.transition='1s'
+        body.style.backgroundColor='black'
+        btnResult.classList.add('nightStyle')
 
+        for(let i=0; i < btn.length; i++){
+            btn[i].classList.add('nightStyle')
+        }
 
-
-
-
-
+    }
+}
