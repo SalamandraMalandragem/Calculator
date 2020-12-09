@@ -1,0 +1,61 @@
+@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+
+* {
+    -webkit-animation: fade-in 1s linear; 
+    -moz-animation: fade-in 1s linear; 
+    -o-animation: fade-in 1s linear; 
+    animation: fade-in 1s linear; 
+}
+.btn {
+    width: 25%;
+    height: 60px;
+    background: #fc0;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    user-select: none;
+}
+
+.btnResult{
+    width: 100%;
+}
+
+
+.btn:hover {
+    background: #f70;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#calc-wrap {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: #eee;
+}
+
+#calc {
+    width: 240px;
+    display: inline-block;
+}
+
+#inputVal {
+    resize : none;
+    width: 100%;
+    border: 0;
+    font-size: 20px;
+    resize: vertical;
+    background-color: rgb(224, 221, 195);
+    padding: 0;
+    transition: 1s;
+}
+
+#inputVal:hover{
+    background-color: rgb(194, 190, 158);
+}
+
+
+  
